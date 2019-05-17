@@ -1,3 +1,7 @@
+package syntax;
+
+import interpreter.Contex;
+
 public class CommandRight implements ICommand {
 
     @Override
