@@ -1,5 +1,6 @@
 package test;
-import lexer.BrainfuckRunner;
+import lexer.SyntaxException;
+
 import java.util.Scanner;
 
 public class Main {
@@ -10,7 +11,12 @@ public class Main {
         String input = sc.nextLine();
 
         BrainfuckRunner brainfuckRunner = new BrainfuckRunner();
-        brainfuckRunner.run(input);
+
+        try {
+            brainfuckRunner.run(input);
+        }catch (SyntaxException syntaxException){
+            System.out.println(syntaxException.getMessage());
+        }
 
         sc.close();
     }
