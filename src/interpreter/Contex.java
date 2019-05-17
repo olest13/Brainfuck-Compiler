@@ -42,10 +42,15 @@ public class Contex {
 
     public  void rightPosition(){
         position++;
+        if (position > memorySize-1)
+            position = 0;
     }
 
     public void leftPosition(){
+
         position--;
+        if (position < 0)
+            position = memorySize-1;
     }
 
     public byte getCurrent(){
